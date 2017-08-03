@@ -1,5 +1,11 @@
 module COpenGL [system] {
-    header "opengl_includes.h"
-    link "GL"
-    export *
+    explicit module OSX {
+        header "opengl_includes.h"
+        export *
+    }
+    explicit module LINUX {
+        header "opengl_includes.h"
+        link "GL"
+        export *
+    }
 }
